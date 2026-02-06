@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - St.Marys Church Nediyasala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="history.html">History</a>
+        <a href="gallery.html" style="color: var(--accent-color);">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="gallery-hero">
+        <h1>Gallery</h1>
+    </header>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <!-- Dynamic Content Will Be Loaded Here -->
+
+            <!-- Static Fallback Items -->
+            <div class="gallery-item">
+                <img src="images/amma.jpg" alt="St. Mary">
+                <div class="overlay">
+                    <h3>Nediyala amma</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/palli.jpg" alt="Church Facade">
+                <div class="overlay">
+                    <h3>Our Church</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/saint.jpg" alt="St. Sebastien">
+                <div class="overlay">
+                    <h3>St. Sebastien</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/hall.jpeg" alt="Parish Hall">
+                <div class="overlay">
+                    <h3>Parish Hall</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/achan1.jpg" alt="Vicar">
+                <div class="overlay">
+                    <h3>Vicar</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/achan2.jpg" alt="Asst. Vicar">
+                <div class="overlay">
+                    <h3>Asst. Vicar</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/hand.jpeg" alt="Prayer">
+                <div class="overlay">
+                    <h3>Devotion</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/palli.jpg" alt="Church View">
+                <div class="overlay">
+                    <h3>Architecture</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="outro"></div>
+
+    <!-- Dynamic Gallery Script -->
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="gallery.js"></script>
+
+</body>
+
+</html>
