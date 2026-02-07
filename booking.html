@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking.css">
+    <title>Booking - St.Marys Church Nediyasala</title>
+</head>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="history.html">History</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+
+    <section class="booking">
+        <div class="head">
+            <img src="images/hand.jpeg" alt="Church Logo">
+            <div class="cover">
+                <h2>prayers</h2>
+                <div class="opt">
+                    <button id="mass">Mass</button>
+                    <button id="novena">Novena</button>
+                    <button id="mass-oppees">Mass & Opees</button>
+                    <button id="pidi-nercha">Pidi Nercha</button>
+                    <button id="donations">Donations</button>
+                </div>
+            </div>
+        </div>
+        <div class="P-booking">
+            <h2>St.Marys Cultural Center</h2>
+            <div class="row">
+                <div class="img"><img src="images/hall.jpeg" alt="Cultural Center">
+                    <p>Main Auditoriam</p>
+                </div>
+                <div class="col">
+                    <p>Please contact the church office for booking<br>Phone: 9495866047 (Fr.Joseph Athickal)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="overlay"></div>
+
+    <div id="bookingpg">
+        <h3 id="heading">HollyMass Booking</h3>
+
+        <div id="input">
+            <label for="date" id="datebk">Select Date:</label>
+            <input type="date" id="datepg">
+
+            <div id="notepg">
+                <label for="note" id="bknote">Note:</label>
+                <textarea id="noteInput" placeholder="Add note..."></textarea>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="closeModal" class="cancel">Cancel</button>
+            <button id="submitBooking" class="submit">Pay</button>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBzpwlLwAkCAPk7s01Kh-KHEADOzNshkNQ",
+            authDomain: "my-parish-website.firebaseapp.com",
+            projectId: "my-parish-website",
+            storageBucket: "my-parish-website.firebasestorage.app",
+            messagingSenderId: "486240317866",
+            appId: "1:486240317866:web:308592d7bd29262cc73bd3"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        window.db = getFirestore(app);
+    </script>
+
+
+    <script src="booking.js"></script>
+</body>
+
+</html>
